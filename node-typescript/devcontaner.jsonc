@@ -21,6 +21,7 @@
         // general
         "editor.guides.bracketPairs": true,
         "editor.stickyScroll.enabled": true,
+        "editor.inlayHints.enabled": "on",
         // terminal
         "terminal.integrated.defaultProfile.linux": "zsh",
         // typescript
@@ -32,7 +33,13 @@
         "typescript.inlayHints.parameterNames.enabled": "literals",
         "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
         // javascript
+        "javascript.validate.enable": true,
         "javascript.inlayHints.variableTypes.enabled": true,
+        "javascript.inlayHints.parameterNames.enabled": "literals",
+        "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+        "javascript.inlayHints.parameterTypes.enabled": true,
+        "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+        "javascript.inlayHints.enumMemberValues.enabled": true,
         // markdown
         "markdown.preview.scrollEditorWithPreview": true,
         "markdown.preview.scrollPreviewWithEditor": true,
