@@ -1,0 +1,58 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "name": "Latex & ModernCV",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "qmcgaw/latexdevcontainer:latest",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [3000],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "tlmgr install moderncv fontawesome5 pgf multirow arydshln", // pgf -> tikz
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // general
+        "editor.guides.bracketPairs": true,
+        "editor.stickyScroll.enabled": true,
+        // terminal
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        // latex (https://github.com/qdm12/latexdevcontainer/blob/master/.devcontainer/devcontainer.json)
+        "latex-workshop.linting.chktex.enabled": true,
+        "latex-workshop.linting.chktex.exec.path": "chktex",
+        "latex-workshop.latex.clean.subfolder.enabled": true,
+        "latex-workshop.latex.autoClean.run": "onBuilt",
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
+        "latex-workshop.latexindent.path": "latexindent",
+        "latex-workshop.latexindent.args": [
+          "-c",
+          "%DIR%/",
+          "%TMPFILE%",
+          "-y=defaultIndent: '%INDENT%'"
+        ]
+      },
+      "extensions": [
+        "ban.spellright",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "jock.svg",
+        "shardulm94.trailing-spaces",
+        "james-yu.latex-workshop",
+        "waderyan.gitblame",
+        "wmaurer.change-case"
+      ]
+    }
+  }
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
