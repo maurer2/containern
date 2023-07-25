@@ -88,8 +88,10 @@
         "wix.vscode-import-cost",
         "wmaurer.change-case",
         "yatki.vscode-surround",
-        "Orta.vscode-jest" // jest
+        "Orta.vscode-jest", // jest
         // "ZixuanChen.vitest-explorer" // vitest
+        "yoavbls.pretty-ts-errors",
+        "mikestead.dotenv"
       ]
     }
   }
