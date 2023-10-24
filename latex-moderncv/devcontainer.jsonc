@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
-  "name": "Latex & ModernCV",
+  "name": "Latex for ModernCV",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "qmcgaw/latexdevcontainer:latest",
 
@@ -12,7 +12,9 @@
   // "forwardPorts": [3000],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "tlmgr install moderncv fontawesome5 pgf multirow arydshln", // pgf -> tikz
+  // academicons doesn't work with pdflatex
+  // pgf -> tikz
+  "postCreateCommand": "tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons",
 
   // Configure tool-specific properties.
   "customizations": {
@@ -38,6 +40,49 @@
           "%DIR%/",
           "%TMPFILE%",
           "-y=defaultIndent: '%INDENT%'"
+        ],
+        // https://www.joelotz.com/blog/2022/enabling-different-latex-compilers-in-vs-code.html
+        "latex-workshop.latex.tools": [
+          {
+            "name": "lualatex",
+            "command": "lualatex",
+            "args": [
+              "-shell-escape",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-pdf",
+              "-output-directory=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          },
+          {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-output-directory=%OUTDIR%",
+              "%DOC%"
+            ],
+            "env": {}
+          }
+        ],
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "build with lualatex",
+            "tools": [
+              "lualatex"
+            ]
+          },
+          {
+            "name": "build with pdflatex",
+            "tools": [
+              "pdflatex"
+            ]
+          }
         ]
       },
       "extensions": [
@@ -48,7 +93,8 @@
         "shardulm94.trailing-spaces",
         "james-yu.latex-workshop",
         "waderyan.gitblame",
-        "wmaurer.change-case"
+        "wmaurer.change-case",
+        "eamodio.gitlens"
       ]
     }
   }
