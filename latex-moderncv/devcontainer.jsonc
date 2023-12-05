@@ -14,7 +14,7 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // academicons doesn't work with pdflatex
   // pgf -> tikz
-  "postCreateCommand": "tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons",
+  "postCreateCommand": "tlmgr update --self && tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons",
 
   // Configure tool-specific properties.
   "customizations": {
@@ -51,7 +51,6 @@
               "-synctex=1",
               "-interaction=nonstopmode",
               "-file-line-error",
-              "-pdf",
               "-output-directory=%OUTDIR%",
               "%DOC%"
             ],
