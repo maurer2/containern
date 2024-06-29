@@ -96,7 +96,9 @@
         "qcz/vscode-restart-ts-server-button",
         "microsoft/vscode-pull-request-github",
         "github.copilot",
-        "vincaslt.highlight-matching-tag"
+        "vincaslt.highlight-matching-tag",
+        "oven.bun-vscode",
+        "biomejs.biome"
       ]
     }
   }
