@@ -97,9 +97,10 @@
         "microsoft/vscode-pull-request-github",
         // "github.copilot",
         "vincaslt.highlight-matching-tag",
-        "oven.bun-vscode",
+        // "oven.bun-vscode",
         // "biomejs.biome"
-        "astro-build.astro-vscode"
+        //astro-build.astro-vscode",
+        "tamasfe.even-better-toml"
       ]
     }
   }
