@@ -23,6 +23,10 @@
         // general
         "editor.guides.bracketPairs": true,
         "editor.stickyScroll.enabled": true,
+        "editor.formatOnSave": true,
+        "files.associations": {
+          "*.tex": "latex"
+        },
         // terminal
         "terminal.integrated.defaultProfile.linux": "zsh",
         // latex (https://github.com/qdm12/latexdevcontainer/blob/master/.devcontainer/devcontainer.json)
@@ -30,12 +34,9 @@
         "latex-workshop.linting.chktex.exec.path": "chktex",
         "latex-workshop.latex.clean.subfolder.enabled": true,
         "latex-workshop.latex.autoClean.run": "onBuilt",
-        "editor.formatOnSave": true,
-        "files.associations": {
-          "*.tex": "latex"
-        },
-        "latex-workshop.latexindent.path": "latexindent",
-        "latex-workshop.latexindent.args": [
+        "latex-workshop.formatting.latex": "latexindent",
+        "latex-workshop.formatting.latexindent.path": "latexindent",
+        "latex-workshop.formatting.latexindent.args": [
           "-c",
           "%DIR%/",
           "%TMPFILE%",
