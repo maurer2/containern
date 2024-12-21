@@ -40,6 +40,8 @@
         "javascript.inlayHints.parameterTypes.enabled": true,
         "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
         "javascript.inlayHints.enumMemberValues.enabled": true,
+        // eslint
+        "eslint.useFlatConfig": false,
         // markdown
         "markdown.preview.scrollEditorWithPreview": true,
         "markdown.preview.scrollPreviewWithEditor": true,
@@ -90,17 +92,19 @@
         "yatki.vscode-surround",
         // "Orta.vscode-jest", // jest
         "vitest.explorer", // vitest
+        // "ms-playwright.playwright"
         "yoavbls.pretty-ts-errors",
         "mikestead.dotenv",
         "vunguyentuan/vscode-css-variables",
         "qcz/vscode-restart-ts-server-button",
         "microsoft/vscode-pull-request-github",
-        // "github.copilot",
+        "github.copilot",
         "vincaslt.highlight-matching-tag",
         // "oven.bun-vscode",
         // "biomejs.biome"
-        //astro-build.astro-vscode",
+        // astro-build.astro-vscode",
         "tamasfe.even-better-toml"
+        // "attilabuti.vscode-mjml"
       ]
     }
   }
