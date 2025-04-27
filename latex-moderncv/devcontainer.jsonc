@@ -3,7 +3,7 @@
 {
   "name": "Latex for ModernCV",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "qmcgaw/latexdevcontainer:latest",
+  "image": "skrallex/latexdevcontainer", // https://github.com/qdm12/latexdevcontainer/pull/66
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
@@ -73,15 +73,11 @@
         "latex-workshop.latex.recipes": [
           {
             "name": "build with lualatex",
-            "tools": [
-              "lualatex"
-            ]
+            "tools": ["lualatex"]
           },
           {
             "name": "build with pdflatex",
-            "tools": [
-              "pdflatex"
-            ]
+            "tools": ["pdflatex"]
           }
         ]
       },
