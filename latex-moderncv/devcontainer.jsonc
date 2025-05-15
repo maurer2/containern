@@ -3,7 +3,9 @@
 {
   "name": "Latex for ModernCV",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "skrallex/latexdevcontainer", // https://github.com/qdm12/latexdevcontainer/pull/66
+  // "image": "qmcgaw/latexdevcontainer:latest", // doesn't work with Texlive 2025
+  // "image": "skrallex/latexdevcontainer", // doesn't work on Apple silicon // https://github.com/qdm12/latexdevcontainer/pull/66
+  "image": "kjarosh/latex:2025.1-medium", // works on Apple silicon but is missing git and bash // https://github.com/kjarosh/latex-docker
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
