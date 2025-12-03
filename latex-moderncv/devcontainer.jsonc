@@ -16,7 +16,7 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // academicons doesn't work with pdflatex
   // pgf -> tikz
-  "postCreateCommand": "tlmgr update --self && tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons",
+  "postCreateCommand": "tlmgr update --self && tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons enumitem supertabular titlesec sectsty csquotes marvosym parskip helvetic babel-german",
 
   // Configure tool-specific properties.
   "customizations": {
@@ -26,12 +26,13 @@
         "editor.guides.bracketPairs": true,
         "editor.stickyScroll.enabled": true,
         "editor.formatOnSave": true,
-        "files.associations": {
-          "*.tex": "latex"
-        },
+        "editor.formatOnSaveMode": "file",
         // terminal
         "terminal.integrated.defaultProfile.linux": "zsh",
         // latex (https://github.com/qdm12/latexdevcontainer/blob/master/.devcontainer/devcontainer.json)
+        "files.associations": {
+          "*.tex": "latex"
+        },
         "latex-workshop.linting.chktex.enabled": true,
         "latex-workshop.linting.chktex.exec.path": "chktex",
         "latex-workshop.latex.clean.subfolder.enabled": true,
