@@ -5,7 +5,8 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   // "image": "qmcgaw/latexdevcontainer:latest", // doesn't work with Texlive 2025
   // "image": "skrallex/latexdevcontainer", // doesn't work on Apple silicon // https://github.com/qdm12/latexdevcontainer/pull/66
-  "image": "kjarosh/latex:2025.1-medium", // works on Apple silicon but is missing git and bash // https://github.com/kjarosh/latex-docker
+  // "image": "kjarosh/latex:2025.1-medium", // compiles correctly but can't run latexindent for code formatting
+  "image": "kjarosh/latex:2025.1-full", // required for latexindent -> fairly large image
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
@@ -14,7 +15,9 @@
       "installBash": true
     },
     // git
-    "ghcr.io/devcontainers/features/git:latest": {}
+    "ghcr.io/devcontainers/features/git:latest": {},
+    // perl -> needed for latexindent
+    "ghcr.io/haukex/devcontainer-features/perl:1": {}
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -23,7 +26,8 @@
   // Use 'postCreateCommand' to run commands after the container is created.
   // academicons doesn't work with pdflatex
   // pgf -> tikz
-  "postCreateCommand": "tlmgr update --self && tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons enumitem supertabular titlesec sectsty csquotes marvosym parskip helvetic babel-german",
+  // YAML::Tiny File::HomeDir -> needed for latexindent
+  "postCreateCommand": "tlmgr update --self && cpanm --notest YAML::Tiny File::HomeDir && tlmgr install moderncv fontawesome5 pgf multirow arydshln luatexbase academicons enumitem supertabular titlesec sectsty csquotes marvosym parskip helvetic babel-german latexindent",
 
   // Configure tool-specific properties.
   "customizations": {
