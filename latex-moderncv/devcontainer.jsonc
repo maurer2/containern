@@ -8,7 +8,14 @@
   "image": "kjarosh/latex:2025.1-medium", // works on Apple silicon but is missing git and bash // https://github.com/kjarosh/latex-docker
 
   // Features to add to the dev container. More info: https://containers.dev/features.
-  // "features": {},
+  "features": {
+    // bash
+    "ghcr.io/devcontainers/features/common-utils:latest": {
+      "installBash": true
+    },
+    // git
+    "ghcr.io/devcontainers/features/git:latest": {}
+  },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [3000],
