@@ -103,8 +103,7 @@
         "shardulm94.trailing-spaces",
         "james-yu.latex-workshop",
         "waderyan.gitblame",
-        "wmaurer.change-case",
-        "eamodio.gitlens"
+        "wmaurer.change-case"
       ]
     }
   }
