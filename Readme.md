@@ -1,3 +1,3 @@
 # Containern
 
-Some dev container settings for VSCode
+Some dev containers for VS Code
