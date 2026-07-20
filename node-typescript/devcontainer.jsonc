@@ -119,7 +119,6 @@
         // typescript & javascript
         "ms-vscode.vscode-typescript-next", // Nightly TypeScript builds
         "yoavbls.pretty-ts-errors", // Formats TypeScript errors to be human-readable
-        "qcz.restart-ts-server-button", // One-click TypeScript server restart in status bar
         "mattpocock.twoslash-queries", // Inline resolved type at a `// ^?` marker
         "mxsdev.typescript-explorer", // Browse/expand a type as a tree in the sidebar
         "meganrogge.template-string-converter", // Auto-converts string literals to template strings
@@ -158,7 +157,6 @@
         // editor & productivity
         "aaron-bond.better-comments", // Colorizes comments by type (!, ?, TODO, *)
         "christian-kohler.path-intellisense", // Autocompletes file paths in imports
-        "vincaslt.highlight-matching-tag", // Highlights the matching HTML/JSX opening/closing tag
         "oderwat.indent-rainbow", // Colorizes indentation levels for readability
         "wmaurer.change-case", // change casing to camelCase, snake_case, PascalCase, kebab-case, CONSTANT_CASE
         "yatki.vscode-surround", // Wraps selections with snippets (try/catch, if, etc.)
