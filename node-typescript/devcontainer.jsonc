@@ -99,9 +99,11 @@
         "markdown.preview.scrollPreviewWithEditor": true,
         // icons
         "vsicons.presets.jsOfficial": true,
+        // workbench
         "workbench.editorAssociations": {
           "*.svg": "default", // https://stackoverflow.com/questions/79363302/how-to-disable-svg-preview-in-vs-code-1-97/79427278#79427278
         },
+        "workbench.experimental.modernUI": true,
         // react-compiler-marker
         "reactCompilerMarker.successEmoji": "✅",
         "reactCompilerMarker.errorEmoji": "🚫",
