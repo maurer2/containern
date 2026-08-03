@@ -100,7 +100,7 @@
         "terminal.integrated.defaultProfile.linux": "zsh",
         // typescript & javascript
         "js/ts.preferences.importModuleSpecifier": "relative",
-        "js/ts.experimental.useTsgo": false,
+        "js/ts.experimental.useTsgo": true,
         "js/ts.validate.enable": true,
         "js/ts.inlayHints.variableTypes.enabled": true,
         "js/ts.inlayHints.parameterTypes.enabled": true,
@@ -138,7 +138,8 @@
         "stylelint.vscode-stylelint", // Stylelint CSS/SCSS linting integration
         "DavidAnson.vscode-markdownlint", // Markdown linting & style enforcement
         // typescript & javascript
-        "ms-vscode.vscode-typescript-next", // Nightly TypeScript builds
+        "TypeScriptTeam.native-preview", // TypeScript 7
+        // "ms-vscode.vscode-typescript-next", // TS6 nightlies
         "yoavbls.pretty-ts-errors", // Formats TypeScript errors to be human-readable
         "mattpocock.twoslash-queries", // Inline resolved type at a `// ^?` marker
         "mxsdev.typescript-explorer", // Browse/expand a type as a tree in the sidebar
