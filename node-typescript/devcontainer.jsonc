@@ -27,7 +27,8 @@
         "editor.formatOnPaste": true,
         "editor.formatOnType": true,
         "editor.codeActionsOnSave": {
-          "source.fixAll.oxc": "always"
+          "source.fixAll.oxc": "always",
+          "source.removeUnusedImports": "always"
         },
         // formatters
         "[javascript]": {
@@ -98,9 +99,11 @@
         "files.trimTrailingWhitespace": true,
         // terminal
         "terminal.integrated.defaultProfile.linux": "zsh",
+        // ts7
+        "js/ts.experimental.useTsgo": true,
+        "js/ts.tsdk.path": "node_modules/@typescript/native",
         // typescript & javascript
         "js/ts.preferences.importModuleSpecifier": "relative",
-        "js/ts.experimental.useTsgo": true,
         "js/ts.validate.enable": true,
         "js/ts.inlayHints.variableTypes.enabled": true,
         "js/ts.inlayHints.parameterTypes.enabled": true,
@@ -127,7 +130,7 @@
         "reactCompilerMarker.successEmoji": "✅",
         "reactCompilerMarker.errorEmoji": "🚫",
         // gitlense
-        "gitlens.statusBar.enabled": true,
+        "gitlens.statusBar.enabled": true
       },
       "extensions": [
         // linting & formatting
@@ -142,7 +145,7 @@
         // "ms-vscode.vscode-typescript-next", // TS6 nightlies
         "yoavbls.pretty-ts-errors", // Formats TypeScript errors to be human-readable
         "mattpocock.twoslash-queries", // Inline resolved type at a `// ^?` marker
-        "mxsdev.typescript-explorer", // Browse/expand a type as a tree in the sidebar
+        // "mxsdev.typescript-explorer", // Browse/expand a type as a tree in the sidebar -> doesn't currently work with TS7
         "meganrogge.template-string-converter", // Auto-converts string literals to template strings
         // testing & coverage
         "vitest.explorer", // Vitest test runner & explorer UI
